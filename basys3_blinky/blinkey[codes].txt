@@ -30,14 +30,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity blinky is
+entity blinkey is
     Port (
         clk : in  STD_LOGIC;
         leds : out STD_LOGIC_VECTOR(15 downto 0)
     );
-end blinky;
+end blinkey;
 
-architecture Behavioral of blinky is
+architecture Behavioral of blinkey is
     signal counter : unsigned(25 downto 0) := (others => '0');
 begin
 
@@ -52,3 +52,4 @@ begin
     leds <= (others => std_logic(counter(25)));
 
 end Behavioral;
+
